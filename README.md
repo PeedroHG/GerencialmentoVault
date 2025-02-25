@@ -7,15 +7,14 @@ Este projeto foi desenvolvido como um trabalho acadêmico, no qual o uso de list
 
 ### 🛠️ Tecnologias Utilizadas
 
-<img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-<img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white">
+<img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white"> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white">
 <img src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white">
 <img src="https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white">
 
 ### 🚀 Link
 
 O projeto está hospedado no Railway e pode ser acessado pelo link:<br>
-🔗 **[https://seu-projeto.up.railway.app](https://seu-projeto.up.railway.app)**
+🔗 **[Gerencialmento Vault](https://gerencialmentovault-production.up.railway.app/)**
 
 ### ▶️ Como Executar Localmente
 
