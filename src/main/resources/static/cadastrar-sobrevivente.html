@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Sobrevivente</title>
+    <link rel="stylesheet" href="./css/cadastrar-sobrevivente.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/cadastrar-sobrevivente.js"></script>
+    <script src="https://kit.fontawesome.com/529434db58.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button class="voltar" onclick="Voltar()">
+        <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
+            <path
+                d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z">
+            </path>
+        </svg>
+        <span>Back</span>
+    </button>
+
+    <div class="container-cad">
+        <button class="cad" onclick="abrirModalCadastro('cadastrar')">Cadastrar Sobrevivente</button>
+        <table class="tabela-sobreviventes">
+            <thead>
+                <tr style="background-color: transparent !important;">
+                    <th style="padding: 0 3vh 0 3vh;"></th>
+                    <th style="padding: 0 3vh 0 3vh;">Nome</th>
+                    <th style="padding: 0 3vh 0 3vh;">Idade</th>
+                    <th style="padding: 0 3vh 0 3vh;">ID</th>
+                    <th style="padding: 0 3vh 0 3vh;">Habilidades</th>
+                    <th style="padding: 0 3vh 0 3vh;">Status</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-sobreviventes">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modal-cadastro" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalCadastro()">&times;</span>
+            <h2>Cadastro Sobreviventes</h2>
+            <form id="form-sobrevivente">
+                <div class="cad1">
+                    <input type="text" name="nome" class="input nome" placeholder="Nome" required>
+                    <input type="number" name="idade" class="input idade" placeholder="Idade" required>
+                    <input type="text" name="id" class="input id" placeholder="Id" pattern="[A-Za-z0-9]+" required>
+                    <select class="input habilidade" name="status" required>
+                        <option value="" disabled selected>Status</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Doente">Doente</option>
+                        <option value="Ferido">Ferido</option>
+                        <option value="Morto">Morto</option>
+                    </select>
+                </div>
+                <div class="cad2">
+                    <select class="input habilidade" id="habilidade">
+                        <option value="" disabled selected>Selecione uma habilidade</option>
+                        <option value="Engenharia">Engenharia</option>
+                        <option value="Medicina">Medicina</option>
+                        <option value="Combate">Combate</option>
+                        <option value="Exploração">Exploração</option>
+                        <option value="Culinária">Culinária</option>
+                        <option value="Diplomacia">Diplomacia</option>
+                        <option value="Hackeamento">Hackeamento</option>
+                        <option value="Furtividade">Furtividade</option>
+                    </select>
+                    <button onclick="adicionarHabilidade()" type="button" class="add-habilidade">Adicionar
+                        Habilidade</button>
+                </div>
+                <div class="lista-habilidades">
+                    <ul id="lista-habilidades"></ul>
+                </div>
+                <button onclick="validarFormulario()" id="botao-cadastro" type="button"
+                    class="cadastrar">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

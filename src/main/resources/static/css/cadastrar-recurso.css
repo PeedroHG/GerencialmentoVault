@@ -1,0 +1,33 @@
+@import url("./reset.css");
+@import url("./cadastrar-sobrevivente.css");
+
+.add-recurso {
+    margin: 0;
+    margin: 1vh 0;
+}
+
+button {
+    margin: 2vh;
+}
+
+.modal-content {
+    width: 30%;
+}
+
+.quantidade {
+    text-align: center;
+}
+.consumir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 0.5vh;
+    width: 16px;
+    color: #fd9843;
+}
+
+.consumir:hover {
+    background-color: #fd9843;
+    color: white;
+}

@@ -1,0 +1,237 @@
+@import url("./reset.css");
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: var(--fonte);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+:root {
+    --fonte: 'JetBrains Mono', monospace;
+}
+
+button {
+    display: flex;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    margin: 2vh;
+    background: #fff;
+}
+
+.voltar {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 0;
+}
+
+.container-cad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.cad {
+    margin: 3vh 0 3vh 0;
+    width: 150px;
+    align-self: center;
+}
+
+button>svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+button:hover>svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+button:hover {
+    box-shadow: 0 0 10px 2px white;
+    transform: translateY(-2px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(220 53 69);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+}
+
+.input {
+    font-family: var(--fonte);
+    font-weight: 500;
+    font-size: .8vw;
+    color: #fff;
+    background-color: rgb(28, 28, 30);
+    box-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5),
+        0 0 0 .15vw transparent;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    padding: 0.4vw;
+    transition: .4s;
+}
+
+.input:hover {
+    box-shadow: 0 0 0 .15vw white;
+}
+
+.input:focus {
+    box-shadow: 0 0 0 .15vw white;
+}
+
+.nome {
+    width: 400px;
+}
+
+.cad1 {
+    margin-top: 3vh;
+}
+
+.cad2 {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    display: flex;
+}
+
+/* select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+select:hover {
+    box-shadow: 0 0 0 .15vw white;
+}
+
+select:focus {
+    box-shadow: 0 0 0 .15vw white;
+}
+
+.add-habilidade {
+    margin: 0 0.4vw;
+}
+
+.habilidade {
+    max-height: 40.31px;
+    justify-content: center;
+}
+
+li {
+    padding: 5px;
+}
+
+.del {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.del:hover,
+.del:focus {
+    color: rgb(220 53 69);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lista-habilidades {
+    min-height: 140px;
+}
+
+.cadastrar {
+    margin: 0 0.4vw;
+}
+
+td {
+    padding: 0.5vh;
+}
+
+.idade,
+.identificador,
+.status {
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #333;
+}
+
+.fa-trash {
+    border-radius: 20px;
+    padding:0.5vh;
+    color: #e35d6a;
+}
+
+.fa-trash:hover {
+    background-color: #e35d6a;
+    color: white;
+}
+
+.fa-pencil {
+    margin-right: 10px;
+    border-radius: 20px;
+    padding:0.5vh;
+    color: #3d8bfd;
+}
+
+.fa-pencil:hover {
+    background-color: #3d8bfd;
+    color: white;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Missão</title>
+    <link rel="stylesheet" href="./css/cadastrar-missao.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/cadastrar-missao.js"></script>
+    <script src="https://kit.fontawesome.com/529434db58.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button class="voltar" onclick="Voltar()">
+        <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
+            <path
+                d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z">
+            </path>
+        </svg>
+        <span>Back</span>
+    </button>
+
+    <div class="container-cad">
+        <button class="cad" onclick="abrirModalCadastro()">Cadastrar Missao</button>
+        <table class="tabela-missoes">
+            <thead>
+                <tr style="background-color: transparent !important;">
+                    <th style="padding: 0 3vh 0 3vh;"></th>
+                    <th style="padding: 0 3vh 0 3vh;">Nome</th>
+                    <th style="padding: 0 3vh 0 3vh;">Objetivo</th>
+                    <th style="padding: 0 3vh 0 3vh;">Local</th>
+                    <th style="padding: 0 3vh 0 3vh;">Status</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-missoes">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modal-cadastro" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalCadastro()">&times;</span>
+            <h2>Cadastro Missoes</h2>
+            <form id="form-missao">
+                <div class="cad1">
+                    <input type="text" id="nome" name="nome" class="input nome" placeholder="Nome" required>
+                    <input type="text" id="objetivo" name="objetivo" class="input objetivo" placeholder="Objetivo"
+                        required>
+                    <input type="text" id="local" name="local" class="input local" placeholder="Local" required>
+                    <select class="input habilidade" id="status" name="status" required>
+                        <option value="" disabled selected>Status</option>
+                        <option value="Em Andamento">Em Andamento</option>
+                        <option value="Sucesso">Sucesso</option>
+                        <option value="Fracasso">Fracasso</option>
+                    </select>
+                </div>
+                <h2 class="subs">Sobreviventes Cadastrados</h2>
+                <table class="tabela-sobreviventes">
+                    <thead>
+                        <tr style="background-color: transparent !important;">
+                            <th style="padding: 0 3vh 0 3vh;"></th>
+                            <th style="padding: 0 3vh 0 3vh;">Nome</th>
+                            <th style="padding: 0 3vh 0 3vh;">Idade</th>
+                            <th style="padding: 0 3vh 0 3vh;">ID</th>
+                            <th style="padding: 0 3vh 0 3vh;">Habilidades</th>
+                            <th style="padding: 0 3vh 0 3vh;">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-sobreviventes">
+                    </tbody>
+                </table>
+                <h2 class="subs">Recursos</h2>
+                <div class="recursos">
+                    <select class="input recursos" name="recurso" id="recurso" required>
+                        <option value="" disabled selected>Recurso</option>
+                        <option value="Água">Água</option>
+                        <option value="Comida">Comida</option>
+                        <option value="Medicamento">Medicamento</option>
+                        <option value="Munição">Munição</option>
+                        <option value="Partes Mecânicas">Partes Mecânicas</option>
+                    </select>
+                    <input type="number" id="quantidade" name="quantidade" class="input quantidade"
+                        placeholder="Quantidade" required>
+                    <button onclick="adicionarRecurso()" id="botao-cadastro" type="button" class="add-rec">Adicionar
+                        Recurso</button>
+                </div>
+                <div class="lista-recurso">
+                    <ul id="lista-recurso"></ul>
+                </div>
+
+                <button onclick="validarFormulario()" id="botao-cadastro" type="button"
+                    class="cadastrar">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-recursos" class="modal">
+        <div class="modal-content mini">
+            <span class="close" onclick="fecharModalCadastro()">&times;</span>
+            <h2 style="margin-bottom: 1vh;">Recursos</h2>
+            <ul id="lista-recursos-modal">
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-sobreviventes" class="modal">
+        <div class="modal-content mini">
+            <span class="close" onclick="fecharModalCadastro()">&times;</span>
+            <h2 style="margin-bottom: 1vh;">Sobreviventes</h2>
+            <ul id="lista-sobreviventes-modal">
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

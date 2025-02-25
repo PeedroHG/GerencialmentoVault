@@ -1,0 +1,20 @@
+@import url("./reset.css");
+@import url("./inicial.css");
+@import url("./vault.css");
+@import url("./cadastrar-sobrevivente.css");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Michroma&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: var(--fonte);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+:root {
+    --fonte: 'JetBrains Mono', monospace;
+}

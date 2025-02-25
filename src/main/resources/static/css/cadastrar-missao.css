@@ -1,0 +1,62 @@
+@import url("./reset.css");
+@import url("./cadastrar-sobrevivente.css");
+
+.tabela-sobreviventes {
+    margin-top: 10px;
+}
+
+
+.subs {
+    margin: 3vh 0;
+}
+
+.recursos {
+    display: flex;
+    align-items: center;
+}
+
+.quantidade {
+    margin-left: 10px;
+}
+
+.add-rec {
+    margin-left: 10px;
+}
+
+.mini {
+    width: 30%;
+}
+
+.lista-recurso {
+    min-height: 140px;
+}
+
+.fa-box {
+    border-radius: 20px;
+    padding: 0.5vh;
+    color: #8c68cd;
+}
+
+.fa-box:hover {
+    background-color: #8c68cd;
+    color: white;
+}
+
+.fa-user {
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 0.5vh;
+    color: #ffcd39;
+}
+
+.fa-user:hover {
+    background-color: #ffcd39;
+    color: white;
+}
+
+
+.icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
