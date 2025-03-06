@@ -11,11 +11,6 @@ Este projeto foi desenvolvido como um trabalho acadêmico, no qual o uso de list
 <img src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white">
 <img src="https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white">
 
-### 🚀 Link
-
-O projeto está hospedado no Railway e pode ser acessado pelo link:<br>
-🔗 **[Gerencialmento Vault](https://gerencialmentovault-production.up.railway.app/)**
-
 ### ▶️ Como Executar Localmente
 
 Instale as dependências:
